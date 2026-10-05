@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ResumeChat } from "./components/resume-chat";
 
 
 
@@ -14,6 +15,9 @@ export default function Home() {
           I'm an AI assistant that can answer questions
           about my resume, skills, experience, and projects.
         </p>
+        <div className="mt-10">
+        <ResumeChat />
+        </div>
       </div>
      </main>
     </div>

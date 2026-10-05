@@ -99,3 +99,5 @@ export const resume = {
     CI/CD pipelines.
   `,
 };
+
+export type Resume = typeof resume;

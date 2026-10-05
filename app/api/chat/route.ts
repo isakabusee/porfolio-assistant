@@ -1,6 +1,6 @@
 import { openai } from '@ai-sdk/openai';
 import { streamText } from 'ai';
-import  {resume } from '@/data/resume.json';
+import { resume } from '@/data/resume';
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
