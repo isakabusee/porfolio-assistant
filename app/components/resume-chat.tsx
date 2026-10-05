@@ -1,14 +1,14 @@
 "use client";
 
-import { useChat} from "@ai-sdk/react";
-import { useState } from "react";
+import { useChat } from "@ai-sdk/react";
+import { useState, type SubmitEvent } from "react";
 
 export function ResumeChat() {
   const [input, setInput] = useState("");
 
   const { messages, sendMessage } = useChat();
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
 
     if (!input.trim()) return;
