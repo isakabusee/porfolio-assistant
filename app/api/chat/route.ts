@@ -1,5 +1,5 @@
-import { openai } from '@ai-sdk/openai';
-import { streamText } from 'ai';
+// import { openai } from '@ai-sdk/openai';
+import { streamText, convertToModelMessages, createUIMessageStreamResponse, toUIMessageStream } from 'ai';
 import { resume } from '@/data/resume';
 
 export async function POST(req: Request) {
@@ -28,10 +28,14 @@ ${JSON.stringify(resume, null, 2)}
 `;
 
   const result = streamText({
-    model: openai("gpt-5"),
-    system: systemPrompt,
-    messages,
+    model: "anthropic/claude-sonnet-5.5",
+    messages: await convertToModelMessages(messages)
+
+
   });
 
-  return result.toUIMessageStreamResponse();
+  return createUIMessageStreamResponse({
+    stream: toUIMessageStream({ stream: result.stream }),
+  });
 }
+

@@ -56,7 +56,7 @@ export function ResumeChat() {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask me about Isaac's experience..."
+          placeholder="Ask me anything about Isaac's portfolio..."
           className="flex-1 rounded-lg border px-4 py-3"
         />
 

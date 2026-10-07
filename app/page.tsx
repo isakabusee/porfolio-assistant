@@ -9,11 +9,11 @@ export default function Home() {
      <main className="min-h-screen px-6 py-16">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-4xl font-bold">
-          Ask About My Experience
+          Isaac Busee's Portfolio Assistant
         </h1>
         <p className="mt-3 text-gray-600">
           I'm an AI assistant that can answer questions
-          about my resume, skills, experience, and projects.
+          about Isaac Busee's resume, skills, experience, and projects.
         </p>
         <div className="mt-10">
         <ResumeChat />
